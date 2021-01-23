@@ -1,0 +1,20 @@
+﻿@model WardrobeApp.Models.User
+
+@{
+    Layout = "~/Views/Shared/Autorization.cshtml";
+}
+
+<h2>Создать учетную запись</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Login, "Введите логин")
+    <br />
+    @Html.EditorFor(model => model.Login)
+    <br />
+    @Html.LabelFor(model => model.Password, "Введите пароль")
+    <br />
+    @Html.EditorFor(model => model.Password)
+    <br />
+    <button class="enter-button" style="left: 50%;" type="submit">Создать</button>
+}

@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/Autorization.cshtml";
+}
+<h2>Загрузите файл</h2>
+<p>
+
+    @using (Html.BeginForm("Upload", "Photos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="upload" />
+        <input type="text" name="category" />
+        <input type="hidden" value="@Model" name="userId" />
+        <br />
+        <button class="enter-button" style="left: 50%;" type="submit">Загрузить</button>
+    }

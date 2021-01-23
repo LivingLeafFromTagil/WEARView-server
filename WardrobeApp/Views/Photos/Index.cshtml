@@ -1,0 +1,26 @@
+﻿<ul class="cbp-rfgrid" style="display: flex; flex-wrap: wrap;">
+    @foreach (WardrobeApp.Models.Photo p in Model)
+    {
+        <li>
+            <a>
+                <img src=@p.Link>
+                <div>
+                    <h3>
+                        @p.Category
+                    </h3>
+                </div>
+            </a>
+        </li>
+    }
+
+<li>
+        <a href="~/Photos/Upload/@ViewBag.UserId">
+            <img src="~/Files/NcJt28shWN0.jpg">
+            <div>
+                <h3>
+                    Загрузить новое фото
+                </h3>
+            </div>
+        </a>
+</li>
+</ul>

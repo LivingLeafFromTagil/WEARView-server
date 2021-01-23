@@ -1,0 +1,16 @@
+﻿<ul class="cbp-rfgrid" style="display: flex; flex-wrap: wrap;">
+    @foreach (WardrobeApp.Models.Look p in Model)
+    {
+        <li style="width: calc(200% / 6);">
+            <a href="~/Looks/Details/@p.Id">
+                <img src=@p.Link>
+                <div>
+                    <h3 >
+                        @p.Name
+                    </h3>
+                </div>
+            </a>
+        </li>
+    }
+</ul>
+

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/Files/CSS/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEARView. Твой онлайн-гардероб</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="        background-image: url(../../Files/back.jpg)">
+    <div>
+        <div class="cbp-af-header">
+            <div class="cbp-af-inner">
+                <h1>WEARView</h1>
+            </div>
+        </div>
+        <div class="container body-content auth-form" style="margin-top: 300px; background-color: rgb(255, 255, 255, 1); width:20%;">
+            @RenderBody()
+            <footer style="bottom: 0; margin-bottom: 20px; left: 43%; position: fixed;">
+                <p>&copy; @DateTime.Now.Year - WEARView. Твой онлайн-гардероб</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
